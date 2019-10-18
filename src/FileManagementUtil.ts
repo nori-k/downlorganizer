@@ -5,7 +5,7 @@ export class FileManagementUtil {
   constructor(private todir: string, private ext: string) {}
 
   public getPathToTargetDirectory(ext: string): string {
-    let todir: string;
+    let todir: string = "";
 
     if (this.isAudio(ext)) {
       todir = watchdir + "/Media/Audio";
