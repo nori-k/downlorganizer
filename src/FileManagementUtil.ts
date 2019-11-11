@@ -2,8 +2,6 @@ import * as os from "os";
 
 let watchdir = os.homedir() + "/Downloads";
 export class FileManagementUtil {
-  constructor(private todir: string, private ext: string) {}
-
   public getPathToTargetDirectory(ext: string): string {
     let todir: string = "";
 
@@ -222,15 +220,31 @@ export class FileManagementUtil {
       : false;
   }
 
-  // is Programming メソッドだけ修正が必要なので一旦放置
-  private isProgramming(ext: string) {
+  private isClang(ext: string) {
     return ext === ".c" ? watchdir + "/Programming/C&C++" : "";
+  }
+
+  private isJava(ext: string) {
     return ext === ".class" ? watchdir + "/Programming/Java" : "";
+  }
+
+  private isDart(ext: string) {
     return ext === ".dart" ? watchdir + "/Programming/Dart" : "";
+  }
+
+  private isPython(ext: string) {
     return ext === ".py" ? watchdir + "/Programming/Python" : "";
+  }
+
+  private isShell(ext: string) {
     return ext === ".sh" ? watchdir + "/Programming/Shell" : "";
+  }
+
+  private isSwift(ext: string) {
     return ext === ".swift" ? watchdir + "/Programming/Swift" : "";
-    return ext === ".html" ? watchdir + "/Programming/C&C++" : "";
+  }
+
+  private isClib(ext: string) {
     return ext === ".h" ? watchdir + "/Programming/C&C++" : "";
   }
 

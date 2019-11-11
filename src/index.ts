@@ -17,6 +17,9 @@ watcher.on("ready", () => {
   console.log("ready watching ...]");
   watcher.on("all", (event, filepath) => {
     ext = path.extname(filepath);
+    let todir: string = "";
+    let piyo = new fmutil.FileManagementUtil();
+    todir = piyo.getPathToTargetDirectory(ext);
     console.log(`${event} : ${filepath}`);
     console.log("'" + ext + "' is file extention!");
   });

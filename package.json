@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/nori-k/downlorganizer#readme",
   "devDependencies": {
-    "@types/node": "^12.11.1",
+    "@types/node": "^12.12.0",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.0",
     "ts-node": "^8.4.1",
@@ -32,6 +32,6 @@
     "typescript": "^3.6.4"
   },
   "dependencies": {
-    "chokidar": "^3.2.2"
+    "chokidar": "^3.2.3"
   }
 }
